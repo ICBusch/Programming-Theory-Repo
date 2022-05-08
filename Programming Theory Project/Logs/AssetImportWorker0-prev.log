@@ -1,0 +1,248 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.32f1 (12f8b0834f07) revision 1243312'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 15734 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.32f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/repos/Programming-Theory-Repo/Programming Theory Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54230
+Successfully changed project path to: C:/repos/Programming-Theory-Repo/Programming Theory Project
+C:/repos/Programming-Theory-Repo/Programming Theory Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 21.83 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.32f1 (12f8b0834f07)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/repos/Programming-Theory-Repo/Programming Theory Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 Laptop GPU (ID=0x2560)
+    Vendor:   
+    VRAM:     6023 MB
+    Driver:   30.0.14.7151
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.32f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001423 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 23.01 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.429 seconds
+Domain Reload Profiling:
+	ReloadAssembly (429ms)
+		BeginReloadAssembly (47ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (328ms)
+			LoadAssemblies (45ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (98ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (24ms)
+			SetupLoadedEditorAssemblies (126ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (23ms)
+				BeforeProcessingInitializeOnLoad (12ms)
+				ProcessInitializeOnLoadAttributes (67ms)
+				ProcessInitializeOnLoadMethodAttributes (20ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002163 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.727 seconds
+Domain Reload Profiling:
+	ReloadAssembly (727ms)
+		BeginReloadAssembly (109ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (574ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (177ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (238ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (159ms)
+				ProcessInitializeOnLoadMethodAttributes (7ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.55 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1520 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 70.8 MB.
+System memory in use after: 70.8 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1957.
+Total: 2.547000 ms (FindLiveObjects: 0.128800 ms CreateObjectMapping: 0.038300 ms MarkObjects: 2.301900 ms  DeleteObjects: 0.077100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/BuschFire/Comdak/Scenes
+  artifactKey: Guid(f57084ed897fef1408442793f30303a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Scenes using Guid(f57084ed897fef1408442793f30303a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '243173f8050d16002b500b8ca2a0f303') in 0.005841 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.161040 seconds.
+  path: Assets/BuschFire/Comdak/Scenes/SinglePlayer_Scene.unity
+  artifactKey: Guid(1eed3866e3aec0a418742ab02752a135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Scenes/SinglePlayer_Scene.unity using Guid(1eed3866e3aec0a418742ab02752a135) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8ff02fad60d9c5a3a9ed732d0607b4b') in 0.006177 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3679.497618 seconds.
+  path: Assets/BuschFire/Comdak
+  artifactKey: Guid(63e9b14c022389a4abc51d461ff3e82a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak using Guid(63e9b14c022389a4abc51d461ff3e82a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4fb69d597ef4d7501ca6b2df87845ef') in 0.001827 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.082794 seconds.
+  path: Assets/BuschFire/Comdak/Models
+  artifactKey: Guid(29a75f23381717a4e92a6046c64c0a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Models using Guid(29a75f23381717a4e92a6046c64c0a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed397dea65f50a91f566efd3becd76e') in 0.006371 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 193.721643 seconds.
+  path: Assets/BuschFire/Comdak/Models/20220506 Space Cannon.fbx
+  artifactKey: Guid(7a9cdaab3dcc22c4cbe21dafa0c6ad09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Models/20220506 Space Cannon.fbx using Guid(7a9cdaab3dcc22c4cbe21dafa0c6ad09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66bc5b0fef98ab4bdd15a16cd7ef8105') in 0.312392 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 253.193935 seconds.
+  path: Assets/BuschFire/Comdak/Ship
+  artifactKey: Guid(f2f4549daba6b90459fdce18c9fc2a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Ship using Guid(f2f4549daba6b90459fdce18c9fc2a21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '279db4d5ab218e12fb8e2078c46e5107') in 0.006375 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.471558 seconds.
+  path: Assets/BuschFire/Comdak/Ship/Scripts
+  artifactKey: Guid(15325557989b7a54baac42ca6d8e9246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Ship/Scripts using Guid(15325557989b7a54baac42ca6d8e9246) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed9b9f59e52cde22858969a437024e2') in 0.002961 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.901607 seconds.
+  path: Assets/BuschFire/Comdak/Ship/Scripts/ShipMotion.cs
+  artifactKey: Guid(5925210af9437fc43ae41f0c84513cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Ship/Scripts/ShipMotion.cs using Guid(5925210af9437fc43ae41f0c84513cae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '831223faf2354e61ee656a095a7bae19') in 0.010228 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002757 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.838 seconds
+Domain Reload Profiling:
+	ReloadAssembly (838ms)
+		BeginReloadAssembly (108ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (679ms)
+			LoadAssemblies (76ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (217ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (44ms)
+			SetupLoadedEditorAssemblies (279ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (75ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (8ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1502 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.9 MB.
+System memory in use after: 73.0 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2004.
+Total: 2.564500 ms (FindLiveObjects: 0.135200 ms CreateObjectMapping: 0.047300 ms MarkObjects: 2.353200 ms  DeleteObjects: 0.028200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 101636.494976 seconds.
+  path: Assets/BuschFire/Comdak/Ship/Scripts/Thruster.cs
+  artifactKey: Guid(0e51e8ea4798e9d4dae3ca06643cc2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Ship/Scripts/Thruster.cs using Guid(0e51e8ea4798e9d4dae3ca06643cc2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '035d7c9996c9eb363760c78c0a121b1a') in 0.063710 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 888.379649 seconds.
+  path: Assets/BuschFire/Comdak/Ship/Scripts/Thruster.cs
+  artifactKey: Guid(0e51e8ea4798e9d4dae3ca06643cc2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BuschFire/Comdak/Ship/Scripts/Thruster.cs using Guid(0e51e8ea4798e9d4dae3ca06643cc2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c961076b52e18b9db944082c38d9c27') in 0.003642 seconds 
