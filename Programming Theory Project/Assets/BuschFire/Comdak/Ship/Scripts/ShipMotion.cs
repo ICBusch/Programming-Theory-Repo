@@ -5,19 +5,38 @@ using UnityEngine;
 public class ShipMotion : MonoBehaviour
 {
     private Rigidbody rb;
-    public List<Thruster> forwardThrust;
-    public List<Thruster> backThrust;
-    public List<Thruster> CWThrust;
-    public List<Thruster> CCWThrust;
-    public List<Thruster> StrafeLeft;
-    public List<Thruster> StrafeRight;
-    
+    public float forwardThrustForce;
+    public List<Thruster> forwardThrusters;
+    public float retroThustForce;
+    public List<Thruster> retroThrusters;
+    public float manuveringThrusterForce;
+    public List<Thruster> CWThrusters;
+    public List<Thruster> CCWThrusters;
+    public List<Thruster> StrafeLeftThrusters;
+    public List<Thruster> StrafeRightThrusters;
+
     // Start is called before the first frame update
+    #region Unity Functions
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-       
+        
+
+        for (int i = 0; i < retroThrusters.Count; i++)
+        {
+            retroThrusters[i].thrustForce = retroThustForce;
+        }
+
+        for (int i = 0; i < StrafeLeftThrusters.Count; i++)
+        {
+            StrafeLeftThrusters[i].thrustForce = manuveringThrusterForce;
+        }
+        for (int i = 0; i < StrafeRightThrusters.Count; i++)
+        {
+            StrafeRightThrusters[i].thrustForce = manuveringThrusterForce;
+        }
+
     }
 
     // Update is called once per frame
@@ -33,26 +52,28 @@ public class ShipMotion : MonoBehaviour
             Rotate(1f);
         if (Input.GetKey(KeyCode.LeftArrow))
             Rotate(-1f);
-    }
+    } 
+    #endregion
 
+    #region Motion Functions
     public void Thrust(float thrustValue)
     {
         if (Mathf.Approximately(thrustValue, 0))
             return;
-        if(thrustValue > 0)
+        if (thrustValue > 0)
         {
-            for (int i = 0; i < forwardThrust.Count; i++)
+            for (int i = 0; i < forwardThrusters.Count; i++)
             {
-                forwardThrust[i].Activate(ref rb);
-                Debug.Log(forwardThrust[i].transform.forward);
+                forwardThrusters[i].Activate(ref rb);
+                Debug.Log(forwardThrusters[i].transform.forward);
             }
         }
-        else if(thrustValue < 0)
+        else if (thrustValue < 0)
         {
-            for(int i = 0; i < backThrust.Count; i++)
+            for (int i = 0; i < retroThrusters.Count; i++)
             {
-                backThrust[i].Activate(ref rb);
-                Debug.Log(backThrust[i].transform.forward);
+                retroThrusters[i].Activate(ref rb);
+                Debug.Log(retroThrusters[i].transform.forward);
             }
         }
 
@@ -62,20 +83,20 @@ public class ShipMotion : MonoBehaviour
     {
         if (Mathf.Approximately(thrustValue, 0))
             return;
-        if(thrustValue > 0)
+        if (thrustValue > 0)
         {
-            for (int i = 0; i < CWThrust.Count; i++)
+            for (int i = 0; i < CWThrusters.Count; i++)
             {
-                CWThrust[i].Activate(ref rb);
-                Debug.Log(CWThrust[i].transform.forward);
+                CWThrusters[i].Activate(ref rb);
+                Debug.Log(CWThrusters[i].transform.forward);
             }
         }
-        else if(thrustValue < 0)
+        else if (thrustValue < 0)
         {
-            for (int i = 0; i < CCWThrust.Count; i++)
+            for (int i = 0; i < CCWThrusters.Count; i++)
             {
-                CCWThrust[i].Activate(ref rb);
-                Debug.Log(CCWThrust[i].transform.forward);
+                CCWThrusters[i].Activate(ref rb);
+                Debug.Log(CCWThrusters[i].transform.forward);
             }
         }
     }
@@ -84,19 +105,28 @@ public class ShipMotion : MonoBehaviour
     {
         if (Mathf.Approximately(thrustValue, 0))
             return;
-        if(thrustValue > 0)
+        if (thrustValue > 0)
         {
-            for (int i = 0; i < StrafeRight.Count; i++)
+            for (int i = 0; i < StrafeRightThrusters.Count; i++)
             {
-                StrafeRight[i].Activate(ref rb);
+                StrafeRightThrusters[i].Activate(ref rb);
             }
         }
-        else if(thrustValue < 0)
+        else if (thrustValue < 0)
         {
-            for (int i = 0; i < StrafeLeft.Count; i++)
+            for (int i = 0; i < StrafeLeftThrusters.Count; i++)
             {
-                StrafeLeft[i].Activate(ref rb);
+                StrafeLeftThrusters[i].Activate(ref rb);
             }
+        }
+    } 
+    #endregion
+
+    public void SetForwardThrust(float value)
+    {
+        for (int i = 0; i < forwardThrusters.Count; i++)
+        {
+            forwardThrusters[i].thrustForce = value;
         }
     }
 }

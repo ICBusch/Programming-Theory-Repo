@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 452340000}
   - component: {fileID: 452339999}
   - component: {fileID: 452339998}
+  - component: {fileID: 452340001}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -206,6 +207,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &452340001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452339997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &988788688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4119231195970287112, guid: cc183028242787a408b07de596797527, type: 3}
@@ -314,6 +348,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1819877852}
   - component: {fileID: 1819877853}
+  - component: {fileID: 1819877854}
   m_Layer: 0
   m_Name: Star Field
   m_TagString: Untagged
@@ -348,11 +383,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53b8f77fa45102445a8833f1752ce701, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starPrefab: {fileID: 0}
-  numberOfStars: 0
-  xRange: 100
-  yRange: 100
-  zRange: 100
+  starPrefab: {fileID: 4099630286868309258, guid: cc183028242787a408b07de596797527, type: 3}
+  numberOfStars: 20000
+  range: 1000
+--- !u!114 &1819877854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819877851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63933c48912829e4f80d173f3cee713a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroids:
+  - {fileID: -8044305838332566247, guid: 702151bd7f8bc09469a9206c93716651, type: 3}
+  - {fileID: 1315878722492808436, guid: 26fe8fcdb0ea68549ab0ee60dac3903f, type: 3}
+  - {fileID: -5840968155766428066, guid: e768cea5475133a43adab3dd64f81a1d, type: 3}
+  - {fileID: -7463882975846826193, guid: ffd46fbb0d7b1b445938d1109c89fbf7, type: 3}
+  - {fileID: -8051560786731802814, guid: 1a8b663b50c58b340bafc01221237af6, type: 3}
+  arenaDiameter: 1000
+  numberOfAsteroids: 5000
 --- !u!1001 &3052679370940075825
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,6 +473,10 @@ PrefabInstance:
     - target: {fileID: 3183553380008657830, guid: e849072d914460e48a365df81a1e29f2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183553380008657830, guid: e849072d914460e48a365df81a1e29f2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3183553380008657831, guid: e849072d914460e48a365df81a1e29f2, type: 3}
       propertyPath: m_RootOrder

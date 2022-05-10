@@ -11,4 +11,9 @@ public class Thruster : MonoBehaviour
     {
         rb.AddForceAtPosition(-transform.forward*thrustForce, transform.position,ForceMode.Force);
     }
+
+    public void SetThrustForce(float value)
+    {
+        thrustForce = value;
+    }
 }
