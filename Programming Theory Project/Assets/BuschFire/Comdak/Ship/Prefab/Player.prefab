@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2415096618391347856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1206761104379824516}
+  - component: {fileID: 240644680665284188}
+  m_Layer: 0
+  m_Name: Cannon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1206761104379824516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415096618391347856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10.99}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3183553380008657831}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240644680665284188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2415096618391347856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22163f6ac59fdaa43bfa3c8e7e76ec25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Weapon: {fileID: 0}
+  m_LaunchPostion: {fileID: 0}
 --- !u!1 &3183553379764347730
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,6 +144,7 @@ GameObject:
   - component: {fileID: 3183553380008657831}
   - component: {fileID: 3183553380008657848}
   - component: {fileID: 3183553380008657849}
+  - component: {fileID: 6211457986254675986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -119,6 +165,7 @@ Transform:
   m_Children:
   - {fileID: 3144912853160489847}
   - {fileID: 3183553381484266617}
+  - {fileID: 1206761104379824516}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -150,23 +197,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5925210af9437fc43ae41f0c84513cae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardThrust:
+  forwardThrustForce: 50
+  forwardThrusters:
   - {fileID: 3183553380234097121}
-  backThrust:
+  retroThustForce: 20
+  retroThrusters:
   - {fileID: 3183553380862667068}
   - {fileID: 3183553380347157845}
-  CWThrust:
+  manuveringThrusterForce: 20
+  CWThrusters:
   - {fileID: 3183553381808726673}
   - {fileID: 3183553380059420743}
-  CCWThrust:
+  CCWThrusters:
   - {fileID: 3183553379764347732}
   - {fileID: 3183553379849375949}
-  StrafeLeft:
+  StrafeLeftThrusters:
   - {fileID: 3183553379764347732}
   - {fileID: 3183553380059420743}
-  StrafeRight:
+  StrafeRightThrusters:
   - {fileID: 3183553381808726673}
   - {fileID: 3183553379849375949}
+--- !u!114 &6211457986254675986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183553380008657830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc9108a5d7258a34fa2c4611f201aecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponSystem: {fileID: 0}
 --- !u!1 &3183553380059420741
 GameObject:
   m_ObjectHideFlags: 0
