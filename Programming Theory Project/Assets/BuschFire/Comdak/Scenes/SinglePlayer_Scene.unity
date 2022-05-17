@@ -542,6 +542,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3183553380008657849, guid: e849072d914460e48a365df81a1e29f2, type: 3}
+      propertyPath: retroThustForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183553380008657849, guid: e849072d914460e48a365df81a1e29f2, type: 3}
+      propertyPath: forwardThrustForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183553380008657849, guid: e849072d914460e48a365df81a1e29f2, type: 3}
+      propertyPath: manuveringThrusterForce
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183553380008657849, guid: e849072d914460e48a365df81a1e29f2, type: 3}
+      propertyPath: EnableLinearCounterThrust
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3183553380008657849, guid: e849072d914460e48a365df81a1e29f2, type: 3}
+      propertyPath: EnableAngularCounterThrust
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6211457986254675986, guid: e849072d914460e48a365df81a1e29f2, type: 3}
       propertyPath: weaponSystem
       value: 

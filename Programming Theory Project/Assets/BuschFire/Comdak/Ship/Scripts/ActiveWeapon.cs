@@ -15,14 +15,6 @@ public class ActiveWeapon : MonoBehaviour
         weaponSystem.FireWeapon();
        
     }
-       
-    
+           
 
-#if(UNITY_EDITOR)
-    private void Update()
-    {
-        if(Input.GetKey(KeyCode.Space))
-            FireWeapon();
-    }
-#endif
 }

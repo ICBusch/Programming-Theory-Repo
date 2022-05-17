@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,51 +16,62 @@ public class ShipMotion : MonoBehaviour
     public List<Thruster> StrafeLeftThrusters;
     public List<Thruster> StrafeRightThrusters;
 
+    public bool EnableAngularCounterThrust = false;
+
+    public bool EnableLinearCounterThrust = false;
+
+    public float CounterThrustDelay = 2.0f;
+    private float currentDelay = 0;
+
     // Start is called before the first frame update
     #region Unity Functions
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-        
+        SetForwardThrustValue(forwardThrustForce);
 
-        for (int i = 0; i < retroThrusters.Count; i++)
-        {
-            retroThrusters[i].thrustForce = retroThustForce;
-        }
+        SetRetroThrustValue(retroThustForce);
 
-        for (int i = 0; i < StrafeLeftThrusters.Count; i++)
-        {
-            StrafeLeftThrusters[i].thrustForce = manuveringThrusterForce;
-        }
-        for (int i = 0; i < StrafeRightThrusters.Count; i++)
-        {
-            StrafeRightThrusters[i].thrustForce = manuveringThrusterForce;
-        }
+        SetManuveringThrustValue(manuveringThrusterForce);
 
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
+        if (EnableAngularCounterThrust && currentDelay <= 0)
+            CounterAngularVelocity();
 
-        if (Input.GetKey(KeyCode.UpArrow))
-            Thrust(1f);
-        if (Input.GetKey(KeyCode.DownArrow))
-            Thrust(-1f);
+        if (EnableLinearCounterThrust && currentDelay <= 0)
+            CounterLinearVelocity();
 
-        if (Input.GetKey(KeyCode.RightArrow))
-            Rotate(1f);
-        if (Input.GetKey(KeyCode.LeftArrow))
-            Rotate(-1f);
-    } 
+
+
+        if (rb.velocity.sqrMagnitude < 0.1f && rb.angularVelocity.sqrMagnitude < 0.1f && currentDelay <= 0)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            rb.Sleep();
+        }
+
+        //if(rb.angularVelocity.sqrMagnitude < 0.1f && currentDelay <= 0)
+        //    rb.angularVelocity = Vector3.zero;
+
+        if (currentDelay > 0)
+            currentDelay -= Time.deltaTime;
+
+    }
+
+
+
     #endregion
 
     #region Motion Functions
-    public void Thrust(float thrustValue)
+    protected void Thrust(float thrustValue)
     {
         if (Mathf.Approximately(thrustValue, 0))
             return;
+
         if (thrustValue > 0)
         {
             for (int i = 0; i < forwardThrusters.Count; i++)
@@ -79,10 +91,13 @@ public class ShipMotion : MonoBehaviour
 
     }
 
-    public void Rotate(float thrustValue)
+    protected void Rotate(float thrustValue)
     {
         if (Mathf.Approximately(thrustValue, 0))
             return;
+
+
+
         if (thrustValue > 0)
         {
             for (int i = 0; i < CWThrusters.Count; i++)
@@ -101,10 +116,13 @@ public class ShipMotion : MonoBehaviour
         }
     }
 
-    public void Strafe(float thrustValue)
+    protected void Strafe(float thrustValue)
     {
         if (Mathf.Approximately(thrustValue, 0))
             return;
+
+
+
         if (thrustValue > 0)
         {
             for (int i = 0; i < StrafeRightThrusters.Count; i++)
@@ -119,14 +137,90 @@ public class ShipMotion : MonoBehaviour
                 StrafeLeftThrusters[i].Activate(ref rb);
             }
         }
-    } 
+    }
+
+
+    public void DirectionalThrustInput(Vector2 thrustVector)
+    {
+        if (Mathf.Approximately(thrustVector.sqrMagnitude, 0))
+            return;
+
+        if (EnableLinearCounterThrust)
+            ResetCounterThrustDelay();
+
+        Thrust(thrustVector.y);
+        Strafe(thrustVector.x);
+    }
+
+    public void RotationalThrustInput(float thrustValue)
+    {
+        if (EnableAngularCounterThrust)
+            ResetCounterThrustDelay();
+
+        Rotate(thrustValue);
+    }
+
+
+    private void CounterLinearVelocity()
+    {
+        var dirVelocity = new Vector2(rb.velocity.x, rb.velocity.z);
+        if (Mathf.Approximately(dirVelocity.sqrMagnitude, 0))
+            return;
+
+        var shipForward = new Vector2(transform.forward.x, transform.forward.z);
+        var shipRight = new Vector2(transform.right.x, transform.right.z);
+        var forwardComp = Vector2.Dot(dirVelocity, shipForward);
+        Thrust(-Mathf.Clamp(forwardComp,-1,1));
+        var leftComp = Vector2.Dot(dirVelocity, shipRight);
+        Strafe(-Mathf.Clamp(leftComp,-1,1));
+
+    }
+
+    private void CounterAngularVelocity()
+    {
+        var yRotationVel = rb.angularVelocity.y;
+        if (Mathf.Approximately(yRotationVel, 0))
+            return;
+
+        yRotationVel = Mathf.Clamp(yRotationVel, -1, 1);
+
+        Rotate(-yRotationVel * 0.95f);
+    }
+
+    private void ResetCounterThrustDelay()
+    {
+        currentDelay = CounterThrustDelay;
+    }
+
     #endregion
 
-    public void SetForwardThrust(float value)
+    #region Set Thrust Values
+    public void SetForwardThrustValue(float value)
     {
         for (int i = 0; i < forwardThrusters.Count; i++)
         {
             forwardThrusters[i].thrustForce = value;
         }
     }
+
+    public void SetRetroThrustValue(float value)
+    {
+        for (int i = 0; i < retroThrusters.Count; i++)
+        {
+            retroThrusters[i].thrustForce = value;
+        }
+    }
+
+    public void SetManuveringThrustValue(float value)
+    {
+        for (int i = 0; i < StrafeLeftThrusters.Count; i++)
+        {
+            StrafeLeftThrusters[i].thrustForce = value;
+        }
+        for (int i = 0; i < StrafeRightThrusters.Count; i++)
+        {
+            StrafeRightThrusters[i].thrustForce = value;
+        }
+    }
+    #endregion
 }

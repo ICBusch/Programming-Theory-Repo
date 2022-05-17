@@ -143,8 +143,11 @@ GameObject:
   m_Component:
   - component: {fileID: 3183553380008657831}
   - component: {fileID: 3183553380008657848}
+  - component: {fileID: 1703237210436193487}
   - component: {fileID: 3183553380008657849}
   - component: {fileID: 6211457986254675986}
+  - component: {fileID: 6072075734044423332}
+  - component: {fileID: 1613121801523638774}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -185,6 +188,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1703237210436193487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183553380008657830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7eb060262c27b1498bc22ffbd391c85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipStats: {fileID: 0}
 --- !u!114 &3183553380008657849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,6 +246,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSystem: {fileID: 0}
+--- !u!114 &6072075734044423332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183553380008657830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64542888c87297446b1f3323100157d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1613121801523638774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183553380008657830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44ba57f498acfa448a926f3c684cf4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alignment: {fileID: 11400000, guid: e1c764149e0d2c044bb4f0240e2969c4, type: 2}
 --- !u!1 &3183553380059420741
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,6 +611,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4110936877469609560, guid: 7a9cdaab3dcc22c4cbe21dafa0c6ad09, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934777400606672865, guid: 7a9cdaab3dcc22c4cbe21dafa0c6ad09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a9cdaab3dcc22c4cbe21dafa0c6ad09, type: 3}
 --- !u!4 &3144912853160489847 stripped
@@ -577,3 +626,114 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a9cdaab3dcc22c4cbe21dafa0c6ad09, type: 3}
   m_PrefabInstance: {fileID: 3183553380371764380}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8926145077981242648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6327075106298392964, guid: 7a9cdaab3dcc22c4cbe21dafa0c6ad09, type: 3}
+  m_PrefabInstance: {fileID: 3183553380371764380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1522985926772177604 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4110936877469609560, guid: 7a9cdaab3dcc22c4cbe21dafa0c6ad09, type: 3}
+  m_PrefabInstance: {fileID: 3183553380371764380}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &6280849034140116618
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522985926772177604}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.06553598, y: 0.062057383, z: 0.020000005}
+  m_Center: {x: 0.030648341, y: 0.0000000020954758, z: -4.656613e-10}
+--- !u!114 &2410041115336416740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522985926772177604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be0af48d548b874f8160380ae41b93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DamageScale: 1
+  m_Density: 1
+--- !u!114 &6770003352560581145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522985926772177604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98674e539b4b46a45b43eaa35c397ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 10
+  m_IsCriticalPart: 1
+  m_Died:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HealthReset:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!136 &6845121910841248
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926145077981242648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.01
+  m_Height: 0.15
+  m_Direction: 2
+  m_Center: {x: -4.656649e-10, y: 0.0000000017462298, z: 0.06}
+--- !u!114 &5149593338450571478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926145077981242648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be0af48d548b874f8160380ae41b93f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_DamageScale: 1
+  m_Density: 1
+--- !u!114 &1251078946248602652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926145077981242648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98674e539b4b46a45b43eaa35c397ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxHealth: 10
+  m_IsCriticalPart: 1
+  m_Died:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Damaged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HealthReset:
+    m_PersistentCalls:
+      m_Calls: []
