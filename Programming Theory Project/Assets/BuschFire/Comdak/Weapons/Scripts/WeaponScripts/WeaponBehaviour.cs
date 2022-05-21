@@ -7,6 +7,7 @@ public class WeaponBehaviour : MonoBehaviour
     [SerializeField]
     private WeaponObject m_Weapon;
     public Transform m_LaunchPostion;
+    public int m_WeaponGroup = 0;
     private bool isReadyToFire;
 
     private void Start()

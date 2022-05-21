@@ -8,6 +8,8 @@ public class ProjectileWeapon : WeaponObject // INHERITANCE
     public ProjectileBehaviour ProjectilePrefab;
     public float lifeTime;  
     public float velocity;
+
+
     public override void Fire(Transform launchPosition)  // POLYMORPHISM
     {
         var projectile = Instantiate<ProjectileBehaviour>(ProjectilePrefab, launchPosition.position, launchPosition.rotation);
